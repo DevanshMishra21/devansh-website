@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Devansh Mishra</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
   <style>
     :root {
       --light-bg: #f9f9f9;
       --light-text: #111;
       --dark-bg: #0f0f0f;
       --dark-text: #f0f0f0;
-      --accent: #5eead4;
+      --accent: #7fffd4;
     }
 
     * {
@@ -23,14 +23,13 @@
     html, body {
       height: 100%;
       width: 100%;
-      font-family: 'Inter', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
-      text-align: center;
       background-color: var(--dark-bg);
       color: var(--dark-text);
-      transition: background-color 0.4s, color 0.4s;
+      transition: background-color 0.5s, color 0.5s;
+      font-family: 'Source Code Pro', monospace;
       overflow: hidden;
     }
 
@@ -40,72 +39,86 @@
     }
 
     .container {
-      max-width: 700px;
+      text-align: center;
+      max-width: 720px;
       padding: 2rem;
       z-index: 2;
+      animation: fadeIn 2s ease;
     }
 
     h1 {
-      font-size: 3.5rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
       font-weight: 600;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      letter-spacing: 1px;
     }
 
     p {
-      font-size: 1.25rem;
+      font-size: 1.1rem;
       font-weight: 300;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
+      line-height: 1.8;
+      letter-spacing: 0.5px;
     }
 
     .links {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 1.2rem;
       justify-content: center;
-      margin-bottom: 3rem;
+      margin-bottom: 4rem;
     }
 
     .links a {
-      padding: 0.6rem 1.2rem;
-      border: 1px solid currentColor;
-      border-radius: 9999px;
-      text-decoration: none;
       font-size: 1rem;
-      transition: all 0.3s ease;
+      color: inherit;
+      text-decoration: underline;
+      transition: opacity 0.3s ease;
     }
 
     .links a:hover {
-      background-color: var(--accent);
-      color: #000;
+      opacity: 0.6;
     }
 
     .toggle-btn {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem;
       background: none;
-      border: 1px solid currentColor;
-      padding: 0.5rem 1rem;
-      border-radius: 9999px;
-      font-size: 0.9rem;
+      border: none;
+      font-size: 0.85rem;
       cursor: pointer;
+      font-family: 'Source Code Pro', monospace;
+      color: inherit;
+      opacity: 0.7;
+    }
+
+    .toggle-btn:hover {
+      opacity: 1;
     }
 
     .background {
       position: absolute;
       top: 0;
       left: 0;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(45deg, #0fffc1, #3c64f4, #b233ff, #ff8c00);
-      background-size: 400% 400%;
-      animation: gradientShift 15s ease infinite;
-      filter: blur(100px);
-      opacity: 0.2;
+      width: 100vw;
+      height: 100vh;
+      background: url('https://grainy-gradients.vercel.app/noise.svg');
+      background-size: cover;
+      animation: subtleShift 20s infinite linear;
+      opacity: 0.08;
       z-index: 0;
     }
 
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes subtleShift {
+      0% { background-position: 0% 0%; }
+      100% { background-position: 100% 100%; }
     }
   </style>
 </head>
@@ -113,7 +126,11 @@
   <div class="background"></div>
   <div class="container">
     <h1>Devansh Mishra</h1>
-    <p>Engineer by training. Builder by choice.<br />Currently building Halftime & Drift.</p>
+    <p>
+      Engineer by training.<br>
+      Builder by choice.<br>
+      Currently building Halftime & Drift.
+    </p>
 
     <div class="links">
       <a href="#">DriftApp</a>
@@ -121,9 +138,9 @@
       <a href="#">Resume</a>
       <a href="#">GitHub</a>
     </div>
-
-    <button class="toggle-btn" onclick="toggleTheme()">Toggle Light/Dark</button>
   </div>
+
+  <button class="toggle-btn" onclick="toggleTheme()">Toggle Light / Dark</button>
 
   <script>
     function toggleTheme() {
@@ -132,4 +149,3 @@
   </script>
 </body>
 </html>
-
