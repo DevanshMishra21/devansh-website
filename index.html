@@ -20,16 +20,24 @@
     }
 
     body {
-      background-color: #000;
-      background-image: url('hanuman-background.png');
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-attachment: fixed;
-      background-size: cover;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
+      position: relative;
+      background-color: transparent;
       color: #fff;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-image: url('hanuman-background.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      z-index: -1;
     }
 
     .container {
@@ -39,6 +47,8 @@
       margin-right: 5vw;
       max-width: 400px;
       text-align: right;
+      position: relative;
+      z-index: 1;
     }
 
     h1 {
