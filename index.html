@@ -4,96 +4,132 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Devansh Mishra</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-light: #f9f9f9;
-      --text-light: #111;
-      --bg-dark: #121212;
-      --text-dark: #f1f1f1;
+      --light-bg: #f9f9f9;
+      --light-text: #111;
+      --dark-bg: #0f0f0f;
+      --dark-text: #f0f0f0;
+      --accent: #5eead4;
     }
 
-    body {
+    * {
       margin: 0;
       padding: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-light);
-      color: var(--text-light);
-      transition: background-color 0.3s, color 0.3s;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
+      box-sizing: border-box;
     }
 
-    .dark-mode {
-      background-color: var(--bg-dark);
-      color: var(--text-dark);
+    html, body {
+      height: 100%;
+      width: 100%;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: var(--dark-bg);
+      color: var(--dark-text);
+      transition: background-color 0.4s, color 0.4s;
+      overflow: hidden;
+    }
+
+    body.light {
+      background-color: var(--light-bg);
+      color: var(--light-text);
+    }
+
+    .container {
+      max-width: 700px;
+      padding: 2rem;
+      z-index: 2;
     }
 
     h1 {
-      font-size: 3rem;
-      margin: 0.5em 0;
+      font-size: 3.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
     }
 
     p {
       font-size: 1.25rem;
-      max-width: 600px;
+      font-weight: 300;
+      margin-bottom: 2rem;
     }
 
     .links {
-      margin-top: 2em;
       display: flex;
-      gap: 1em;
       flex-wrap: wrap;
+      gap: 1rem;
       justify-content: center;
+      margin-bottom: 3rem;
     }
 
     .links a {
+      padding: 0.6rem 1.2rem;
+      border: 1px solid currentColor;
+      border-radius: 9999px;
       text-decoration: none;
-      padding: 0.75em 1.5em;
-      border: 2px solid currentColor;
-      border-radius: 6px;
       font-size: 1rem;
-      transition: background 0.3s, color 0.3s;
+      transition: all 0.3s ease;
     }
 
     .links a:hover {
-      background-color: currentColor;
-      color: var(--bg-light);
+      background-color: var(--accent);
+      color: #000;
     }
 
     .toggle-btn {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      padding: 0.5em 1em;
       background: none;
       border: 1px solid currentColor;
-      border-radius: 4px;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.9rem;
       cursor: pointer;
+    }
+
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, #0fffc1, #3c64f4, #b233ff, #ff8c00);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+      filter: blur(100px);
+      opacity: 0.2;
+      z-index: 0;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
   </style>
 </head>
 <body>
-  <button class="toggle-btn" onclick="toggleMode()">Toggle Dark/Light</button>
+  <div class="background"></div>
+  <div class="container">
+    <h1>Devansh Mishra</h1>
+    <p>Engineer by training. Builder by choice.<br />Currently building Halftime & Drift.</p>
 
-  <h1>Devansh Mishra</h1>
-  <p>Engineer by training. Builder by choice.<br />Currently working on Halftime & Drift.</p>
+    <div class="links">
+      <a href="#">DriftApp</a>
+      <a href="#">Halftime</a>
+      <a href="#">Resume</a>
+      <a href="#">GitHub</a>
+    </div>
 
-  <div class="links">
-    <a href="#">DriftApp</a>
-    <a href="#">Halftime</a>
-    <a href="#">Resume</a>
-    <a href="#">Twitter</a>
-    <a href="#">GitHub</a>
+    <button class="toggle-btn" onclick="toggleTheme()">Toggle Light/Dark</button>
   </div>
 
   <script>
-    function toggleMode() {
-      document.body.classList.toggle("dark-mode");
+    function toggleTheme() {
+      document.body.classList.toggle('light');
     }
   </script>
 </body>
 </html>
+
