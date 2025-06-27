@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Devansh Mishra</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -13,205 +13,119 @@
     }
 
     body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-      color: #212529;
-      padding-top: 4rem;
-    }
-
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: #fff;
-      padding: 1rem 2rem;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      font-family: 'Libre Baskerville', serif;
+      background-color: #18332c; /* Drift dark green */
+      color: #DDD8CC;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
-      z-index: 1000;
-    }
-
-    .navbar h1 {
-      font-size: 1.5rem;
-      color: #0d6efd;
-    }
-
-    .toggle-mode {
-      cursor: pointer;
-      padding: 0.5rem 1rem;
-      background-color: #0d6efd;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-    }
-
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
+      justify-content: center;
       text-align: center;
-      padding: 10vh 1rem 5rem;
+      height: 100vh;
+      padding: 0 1rem;
     }
 
-    h2 {
+    h1 {
       font-size: 2.5rem;
-      font-weight: 600;
-      color: #0d6efd;
       margin-bottom: 1rem;
+      max-width: 800px;
     }
 
     p {
+      font-size: 1.1rem;
+      max-width: 500px;
+      margin-bottom: 2.5rem;
+    }
+
+    .cta-button {
+      background: transparent;
+      border: 2px solid #DDD8CC;
+      color: #DDD8CC;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 32px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cta-button:hover {
+      background-color: #DDD8CC;
+      color: #18332c;
+    }
+
+    .arrow {
+      margin-left: 10px;
       font-size: 1.2rem;
-      margin-bottom: 2rem;
-      color: #495057;
     }
 
     .links {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       gap: 1rem;
+      justify-content: center;
+      margin-top: 2rem;
     }
 
     .links a {
       text-decoration: none;
-      color: #fff;
-      background-color: #0d6efd;
-      padding: 0.75rem 1.5rem;
-      border-radius: 6px;
-      font-weight: 500;
-      transition: background-color 0.3s;
+      color: #DDD8CC;
+      border: 1px solid #DDD8CC;
+      padding: 0.5rem 1.2rem;
+      border-radius: 24px;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
     }
 
     .links a:hover {
-      background-color: #0b5ed7;
+      background-color: #DDD8CC;
+      color: #18332c;
     }
 
-    .contact-section {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 4rem 1rem;
-      text-align: center;
+    .footer {
+      position: absolute;
+      bottom: 1rem;
+      font-size: 0.9rem;
     }
 
-    .contact-section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #0d6efd;
-    }
-
-    .contact-section form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .contact-section input,
-    .contact-section textarea {
-      padding: 0.75rem;
-      border: 1px solid #ced4da;
-      border-radius: 4px;
-      font-size: 1rem;
-    }
-
-    .contact-section button {
-      padding: 0.75rem;
-      background-color: #0d6efd;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-
-    .contact-section button:hover {
-      background-color: #0b5ed7;
-    }
-
-    .download-btn {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #198754;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 500;
-    }
-
-    .download-btn:hover {
-      background-color: #157347;
+    .footer a {
+      color: #AAA;
+      text-decoration: underline;
     }
 
     @media (max-width: 600px) {
-      h2 {
+      h1 {
         font-size: 2rem;
       }
-      .links a {
-        padding: 0.6rem 1rem;
-        font-size: 0.95rem;
+      p {
+        font-size: 1rem;
       }
-    }
-
-    .dark-mode {
-      background: #121212;
-      color: #f8f9fa;
-    }
-
-    .dark-mode .navbar,
-    .dark-mode .container,
-    .dark-mode .contact-section {
-      background-color: #1e1e1e;
-    }
-
-    .dark-mode .links a,
-    .dark-mode .contact-section button,
-    .dark-mode .toggle-mode {
-      background-color: #0d6efd;
-      color: #fff;
-    }
-
-    .dark-mode .contact-section input,
-    .dark-mode .contact-section textarea {
-      background-color: #2c2c2c;
-      color: #fff;
-      border: 1px solid #444;
     }
   </style>
 </head>
 <body>
-  <div class="navbar">
-    <h1>Devansh</h1>
-    <button class="toggle-mode" onclick="toggleTheme()">Toggle Mode</button>
+
+  <h1>Hi, I'm Devansh Mishra.</h1>
+  <p>I build things at the intersection of strategy, engineering, and product design.<br />Currently working on DriftChat and Halftime.</p>
+
+  <a class="cta-button" href="mailto:devansh@example.com">
+    Get in touch <span class="arrow">&#10142;</span>
+  </a>
+
+  <div class="links">
+    <a href="#">DriftApp</a>
+    <a href="#">Halftime</a>
+    <a href="#">Resume</a>
+    <a href="#">GitHub</a>
   </div>
 
-  <div class="container">
-    <h2>Devansh Mishra</h2>
-    <p>Engineer. Builder. Strategist.<br>Currently working on projects that blend creativity, community, and code.</p>
-    <div class="links">
-      <a href="#">DriftApp</a>
-      <a href="#">Halftime</a>
-      <a href="#">Resume</a>
-      <a href="#">GitHub</a>
-    </div>
-    <a class="download-btn" href="#">Download Resume</a>
+  <div class="footer">
+    <a href="#">Terms & Conditions</a>
   </div>
 
-  <div class="contact-section">
-    <h2>Contact Me</h2>
-    <form>
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
-
-  <script>
-    function toggleTheme() {
-      document.body.classList.toggle('dark-mode');
-    }
-  </script>
 </body>
 </html>
