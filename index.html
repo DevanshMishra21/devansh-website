@@ -14,34 +14,27 @@
 
     body {
       font-family: 'Libre Baskerville', serif;
-      background-color: #0B1A2D; /* Navy Blue */
+      background-color: #0B1A2D;
       color: #DDD8CC;
       overflow: hidden;
       position: relative;
       min-height: 100vh;
     }
 
-    /* Twinkling Stars Background */
+    /* ✨ Bigger Twinkling Stars */
     .stars {
       width: 100%;
       height: 100%;
-      background: transparent;
       position: absolute;
       top: 0;
       left: 0;
       z-index: 0;
-    }
-
-    .stars::after {
-      content: '';
-      width: 200%;
-      height: 200%;
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
-      animation: twinkle 20s linear infinite;
-      opacity: 0.15;
+      background: radial-gradient(white 1px, transparent 1px),
+                  radial-gradient(white 1px, transparent 1px);
+      background-size: 100px 100px;
+      background-position: 0 0, 50px 50px;
+      opacity: 0.1;
+      animation: twinkle 30s linear infinite;
     }
 
     @keyframes twinkle {
@@ -62,16 +55,20 @@
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.75rem;
       margin-bottom: 1rem;
       max-width: 800px;
+      color: #f8f8f8;
+      text-shadow: 0 0 6px #b477ff, 0 0 12px #b477ff;
     }
 
     p {
-      font-size: 1.1rem;
-      max-width: 550px;
+      font-size: 1.2rem;
+      max-width: 600px;
       margin-bottom: 2.5rem;
-      line-height: 1.6;
+      line-height: 1.7;
+      color: #d8d8f2;
+      text-shadow: 0 0 3px rgba(180, 180, 255, 0.1);
     }
 
     .cta-button {
@@ -88,6 +85,7 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
     }
 
     .cta-button:hover {
@@ -116,6 +114,8 @@
       border-radius: 24px;
       font-size: 0.95rem;
       transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.02);
+      box-shadow: 0 0 4px rgba(180, 119, 255, 0.2);
     }
 
     .links a:hover {
@@ -126,10 +126,11 @@
     .footer {
       position: absolute;
       bottom: 1rem;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       width: 100%;
       text-align: center;
       z-index: 1;
+      color: #888;
     }
 
     .footer a {
@@ -139,7 +140,7 @@
 
     @media (max-width: 600px) {
       h1 {
-        font-size: 2rem;
+        font-size: 2.1rem;
       }
       p {
         font-size: 1rem;
@@ -157,7 +158,7 @@
 
   <div class="content">
     <h1>Hi, I'm Devansh Mishra.</h1>
-    <p>Engineer. Builder. Strategist. <br> I work on ideas that blend creativity, community, and code. Currently building DriftChat~ A sarcastic wingman to connect you with friends via SMS</p>
+    <p>Engineer. Builder. Strategist. <br> I work on ideas that blend creativity, community, and code. Currently building DriftChat — a sarcastic wingman that connects you to new people via SMS.</p>
 
     <a class="cta-button" href="mailto:devanshrajmishra@hotmail.com">
       Get in touch <span class="arrow">&#10142;</span>
@@ -170,10 +171,5 @@
       <a href="https://www.linkedin.com/in/devanshmishra21" target="_blank">LinkedIn</a>
     </div>
   </div>
-
-  <div class="footer">
-    <a href="#">Terms & Conditions</a>
-  </div>
-
 </body>
 </html>
