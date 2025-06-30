@@ -6,6 +6,11 @@
   <title>Devansh Mishra</title>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --accent: #f8f1dc;
+      --bg: #0B1A2D;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -14,38 +19,100 @@
 
     body {
       font-family: 'Libre Baskerville', serif;
-      background-color: #0B1A2D;
-      color: #DDD8CC;
-      overflow: hidden;
-      position: relative;
+      background-color: var(--bg);
+      color: var(--accent);
       min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      padding: 2rem;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      font-weight: normal;
+    }
+
+    p {
+      font-size: 1rem;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      line-height: 1.6;
+    }
+
+    .cta-button {
+      background: transparent;
+      border: 2px solid var(--accent);
+      color: var(--accent);
+      padding: 0.75rem 1.75rem;
+      font-size: 1rem;
+      border-radius: 9999px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 2rem;
+    }
+
+    .cta-button:hover {
+      background-color: var(--accent);
+      color: var(--bg);
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .links a {
+      text-decoration: none;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.5rem 1.25rem;
+      border-radius: 9999px;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+
+    .links a:hover {
+      background-color: var(--accent);
+      color: var(--bg);
     }
 
     .stars {
-      width: 100%;
-      height: 100%;
       position: absolute;
       top: 0;
       left: 0;
-      z-index: 0;
-      background: #0B1A2D;
-    }
-
-    .stars::before {
-      content: '';
-      position: absolute;
       width: 100%;
       height: 100%;
-      background-image: radial-gradient(white 1.5px, transparent 1.5px);
-      background-size: 80px 80px;
-      animation: twinkle 4s infinite linear;
-      opacity: 0.15;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .stars svg {
+      width: 100%;
+      height: 100%;
+      opacity: 0.2;
+      animation: twinkle 30s linear infinite;
     }
 
     @keyframes twinkle {
-      0% { transform: scale(1) rotate(0deg); opacity: 0.12; }
-      50% { transform: scale(1.05) rotate(180deg); opacity: 0.22; }
-      100% { transform: scale(1) rotate(360deg); opacity: 0.12; }
+      0% { transform: scale(1) rotate(0deg); }
+      50% { transform: scale(1.05) rotate(180deg); }
+      100% { transform: scale(1) rotate(360deg); }
     }
 
     .crt {
@@ -67,128 +134,46 @@
     }
 
     @keyframes crt-flicker {
-      0%   { opacity: 0.97; }
-      50%  { opacity: 1; }
-      100% { opacity: 0.97; }
+      0%, 100% { opacity: 0.97; }
+      50% { opacity: 1; }
     }
 
-    .content {
+    .container {
       position: relative;
       z-index: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      height: 100vh;
-      padding: 0 1rem;
-    }
-
-    h1 {
-      font-size: 1.3rem;
-      margin-bottom: 2rem;
-      max-width: 800px;
-    }
-
-    p {
-      font-size: 0.9rem;
-      max-width: 600px;
-      margin-bottom: 2rem;
-      line-height: 2;
-    }
-
-    .cta-button {
-      background: transparent;
-      border: 2px solid #DDD8CC;
-      color: #DDD8CC;
-      padding: 0.8rem 1.6rem;
-      font-size: 0.8rem;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      margin-bottom: 2rem;
-    }
-
-    .cta-button:hover {
-      background-color: #DDD8CC;
-      color: #0B1A2D;
-    }
-
-    .arrow {
-      margin-left: 8px;
-    }
-
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-      margin-top: 1rem;
-    }
-
-    .links a {
-      text-decoration: none;
-      color: #DDD8CC;
-      border: 1px solid #DDD8CC;
-      padding: 0.6rem 1.2rem;
-      font-size: 0.75rem;
-    }
-
-    .links a:hover {
-      background-color: #DDD8CC;
-      color: #0B1A2D;
-    }
-
-    .footer {
-      position: absolute;
-      bottom: 1rem;
-      font-size: 0.6rem;
-      width: 100%;
-      text-align: center;
-      z-index: 1;
-      color: #888;
-    }
-
-    .footer a {
-      color: #AAA;
-      text-decoration: underline;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1rem;
-      }
-      p {
-        font-size: 0.7rem;
-      }
-      .cta-button {
-        font-size: 0.7rem;
-      }
-      .links a {
-        font-size: 0.6rem;
-        padding: 0.5rem 1rem;
-      }
+      max-width: 720px;
     }
   </style>
 </head>
 <body>
 
-  <div class="stars"></div>
+  <div class="stars">
+    <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+      <circle cx="10" cy="10" r="0.5" fill="white" />
+      <circle cx="30" cy="25" r="0.7" fill="white" />
+      <circle cx="50" cy="50" r="0.6" fill="white" />
+      <circle cx="70" cy="80" r="0.8" fill="white" />
+      <circle cx="90" cy="20" r="0.5" fill="white" />
+      <circle cx="20" cy="90" r="0.6" fill="white" />
+      <circle cx="80" cy="60" r="0.7" fill="white" />
+    </svg>
+  </div>
 
-  <div class="content">
-    <h1>HI, I'M DEVANSH MISHRA.</h1>
-    <p>ENGINEER • STRATEGIST • BUILDER<br>
-       CURRENTLY BUILDING DRIFTCHAT — A SARCASTIC BOT THAT CONNECTS YOU TO NEW PEOPLE VIA SMS.</p>
+  <div class="container">
+    <h1>Devansh Mishra</h1>
+    <h2>Engineer. Builder. Strategist.</h2>
+    <p>
+      I work on ideas that blend creativity, community, and code.<br>
+      Currently building DriftChat — a sarcastic wingman that connects you to new people via SMS.
+    </p>
 
-    <a class="cta-button" href="mailto:devanshrajmishra@hotmail.com">
-      GET IN TOUCH <span class="arrow">&#10142;</span>
-    </a>
+    <a class="cta-button" href="mailto:devanshrajmishra@hotmail.com">Get in touch</a>
 
     <div class="links">
-      <a href="https://www.drift-chat.com" target="_blank">DRIFTCHAT</a>
-      <a href="Resume_Mishra.pdf" download>RESUME</a>
-      <a href="Portfolio.pdf" download>PORTFOLIO</a>
-      <a href="https://www.linkedin.com/in/devanshmishra21" target="_blank">LINKEDIN</a>
+      <a href="https://www.drift-chat.com" target="_blank">DriftChat</a>
+      <a href="Resume_Mishra.pdf" download>Resume</a>
+      <a href="Portfolio.pdf" download>Portfolio</a>
+      <a href="https://www.linkedin.com/in/devanshmishra21" target="_blank">LinkedIn</a>
     </div>
   </div>
 
