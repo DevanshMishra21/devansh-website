@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About | Devansh Mishra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-mark">DM</span>
+        <span class="logo-text">Devansh Mishra</span>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="index.html#work" class="nav-link">Work</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">About me</p>
+          <h1>Engineer, builder, and future strategist.</h1>
+          <p class="about-lead">
+            I grew up solving practical problems first and learning the theory
+            after. That pattern has followed me into data centers, product
+            experiments, and now toward strategy and analytics.
+          </p>
+        </div>
+
+        <div class="about-body">
+          <p>
+            I’m currently a Mechanical Engineer at WSP, focused on mission-critical
+            data center projects. Most of my day is spent translating real-world
+            constraints — power, cooling, uptime, budgets — into systems that
+            actually work under load.
+          </p>
+
+          <p>
+            Outside of client work, I’ve been building products like
+            <strong>Driftchat</strong>, an SMS-based conversation matching app with
+            an AI “wingman”, and <strong>Halftime</strong>, a community-driven
+            sports platform. These projects are my way of learning product,
+            growth, and user psychology the hard way: by shipping.
+          </p>
+
+          <p>
+            Long term, I’m interested in roles that sit at the intersection of
+            infrastructure, analytics, and strategy — whether that’s in consulting
+            (MBB / Tier-1), data-center operators, or AI-driven infrastructure
+            products. I like environments where decisions are made with both
+            numbers and judgment.
+          </p>
+
+          <h2>How I tend to work</h2>
+          <ul class="about-list">
+            <li>
+              <strong>First principles + details.</strong> I like to understand
+              the physics and economics behind a system, then sweat the drawings,
+              edge cases, and failure modes.
+            </li>
+            <li>
+              <strong>Clear writing.</strong> I use writing to make decisions —
+              short memos, trade-off docs, and post-mortems. If something can’t
+              be written clearly, it’s usually not understood.
+            </li>
+            <li>
+              <strong>Bias to build.</strong> I prototype in code or spreadsheets
+              quickly instead of over-polishing slides. Feedback is faster when
+              there’s something real to react to.
+            </li>
+          </ul>
+
+          <h2>Outside of work</h2>
+          <p>
+            When I’m not staring at load schedules or FEA diagrams, you’ll usually
+            find me playing or watching football, in the gym, or experimenting with
+            new recipes. I like teams and environments that are ambitious, honest,
+            and a little bit competitive.
+          </p>
+
+          <p>
+            If any of this sounds aligned with the kind of people you like working
+            with, I’d be happy to talk.
+          </p>
+
+          <div class="about-cta">
+            <a class="btn primary" href="mailto:YOUR_EMAIL_HERE">Get in touch</a>
+            <a class="btn ghost" href="https://YOUR_RESUME_LINK_HERE" target="_blank">
+              View résumé →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-meta">
+      <span>© <span id="year"></span> Devansh Mishra</span>
+      <span>Built for people who care about craft.</span>
+    </div>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
