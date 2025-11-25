@@ -2,327 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Devansh Mishra | Character Sheet & Skill Tree</title>
+  <title>Devansh | New Game</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Final Fantasy–ish fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="theme-rpg">
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="logo">
-        <span class="logo-mark">DM</span>
-        <div class="logo-text-block">
-          <span class="logo-name">Devansh Mishra</span>
-          <span class="logo-role">Systems • Product • Strategy</span>
-        </div>
-      </div>
-      <nav class="nav">
-        <a href="index.html" class="nav-link active">Character Sheet</a>
-        <a href="about.html" class="nav-link">Lore / About</a>
-        <a href="#skills" class="nav-link">Skill Tree</a>
-        <a href="#quests" class="nav-link">Quests</a>
-        <a href="#contact" class="nav-link">Contact</a>
+<body class="ff-menu-body">
+
+  <main class="ff-menu-wrap">
+    <div class="ff-menu-frame">
+      <header class="ff-menu-header">
+        <div class="ff-menu-title">DEVANSH MISHRA</div>
+        <div class="ff-menu-subtitle">Final Status Screen</div>
+      </header>
+
+      <div class="ff-menu-divider"></div>
+
+      <nav class="ff-menu-list">
+        <!-- Replace hrefs with your actual links / pages -->
+        <a href="https://YOUR_RESUME_LINK_HERE" target="_blank" class="ff-menu-item">
+          <span class="ff-cursor">▶</span>
+          <span class="ff-menu-label">STATUS / RÉSUMÉ</span>
+        </a>
+
+        <a href="https://YOUR_PORTFOLIO_LINK_HERE" target="_blank" class="ff-menu-item">
+          <span class="ff-cursor">▶</span>
+          <span class="ff-menu-label">PORTFOLIO</span>
+        </a>
+
+        <a href="https://YOUR_WRITING_LINK_1_HERE" target="_blank" class="ff-menu-item">
+          <span class="ff-cursor">▶</span>
+          <span class="ff-menu-label">WRITING</span>
+        </a>
+
+        <a href="about.html" class="ff-menu-item">
+          <span class="ff-cursor">▶</span>
+          <span class="ff-menu-label">ABOUT ME (LORE)</span>
+        </a>
+
+        <a href="https://YOUR_DRIFTCHAT_LINK_HERE" target="_blank" class="ff-menu-item">
+          <span class="ff-cursor">▶</span>
+          <span class="ff-menu-label">DRIFTCHAT</span>
+        </a>
+
+        <a href="mailto:YOUR_EMAIL_HERE" class="ff-menu-item">
+          <span class="ff-cursor">▶</span>
+          <span class="ff-menu-label">CONTACT</span>
+        </a>
       </nav>
+
+      <footer class="ff-menu-footer">
+        <div class="ff-footer-left">
+          LV 24 • CLASS: Systems / Product / Strategy
+        </div>
+        <div class="ff-footer-right">
+          © <span id="year"></span> Devansh • Theme: FF Main Menu
+        </div>
+      </footer>
     </div>
-  </header>
-
-  <main>
-    <!-- HERO / CHARACTER SHEET -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-main">
-          <p class="eyebrow">Character Sheet</p>
-          <h1>Devansh Mishra</h1>
-
-          <div class="character-meta">
-            <div class="meta-item">
-              <span class="meta-label">Class</span>
-              <span class="meta-value">Systems Engineer • Builder</span>
-            </div>
-            <div class="meta-item">
-              <span class="meta-label">Level</span>
-              <span class="meta-value">24</span>
-            </div>
-            <div class="meta-item">
-              <span class="meta-label">Alignment</span>
-              <span class="meta-value">Pragmatic • High Agency</span>
-            </div>
-            <div class="meta-item">
-              <span class="meta-label">Current Region</span>
-              <span class="meta-value">Chicago • Data Centers</span>
-            </div>
-          </div>
-
-          <p class="hero-sub">
-            Mechanical engineer working on mission-critical data centers, building
-            AI-powered products like Driftchat on the side, and moving toward
-            analytics / strategy roles at top firms. I like treating careers like
-            RPGs: clear stats, visible skill trees, and quests that actually level you up.
-          </p>
-
-          <div class="hero-actions">
-            <!-- Replace these hrefs with your real links -->
-            <a class="btn primary" href="https://YOUR_RESUME_LINK_HERE" target="_blank">
-              🗂 View Résumé
-            </a>
-            <a class="btn secondary" href="https://YOUR_PORTFOLIO_LINK_HERE" target="_blank">
-              🎨 Design Portfolio
-            </a>
-          </div>
-
-          <div class="inventory-inline">
-            <span class="inv-label">Quick access:</span>
-            <a href="https://YOUR_WRITING_LINK_1_HERE" target="_blank">Writing 1</a>
-            <span>·</span>
-            <a href="https://YOUR_WRITING_LINK_2_HERE" target="_blank">Writing 2</a>
-            <span>·</span>
-            <a href="https://YOUR_DRIFTCHAT_LINK_HERE" target="_blank">Driftchat</a>
-          </div>
-        </div>
-
-        <!-- STATS CARD -->
-        <aside class="stats-card">
-          <h2>Stats</h2>
-          <div class="stats-grid">
-            <div class="stat">
-              <span class="stat-label">Engineering</span>
-              <div class="stat-bar"><span style="width: 88%"></span></div>
-              <span class="stat-score">88 / 100</span>
-            </div>
-            <div class="stat">
-              <span class="stat-label">Problem Solving</span>
-              <div class="stat-bar"><span style="width: 90%"></span></div>
-              <span class="stat-score">90 / 100</span>
-            </div>
-            <div class="stat">
-              <span class="stat-label">Product Sense</span>
-              <div class="stat-bar"><span style="width: 82%"></span></div>
-              <span class="stat-score">82 / 100</span>
-            </div>
-            <div class="stat">
-              <span class="stat-label">Communication</span>
-              <div class="stat-bar"><span style="width: 84%"></span></div>
-              <span class="stat-score">84 / 100</span>
-            </div>
-            <div class="stat">
-              <span class="stat-label">Execution Speed</span>
-              <div class="stat-bar"><span style="width: 86%"></span></div>
-              <span class="stat-score">86 / 100</span>
-            </div>
-          </div>
-
-          <div class="tag-block">
-            <span class="tag-label">Traits</span>
-            <div class="tag-row">
-              <span class="tag">Systems thinking</span>
-              <span class="tag">Bias to build</span>
-              <span class="tag">High ownership</span>
-            </div>
-          </div>
-
-          <div class="tag-block">
-            <span class="tag-label">Currently equipped</span>
-            <div class="tag-row">
-              <span class="tag">Data center projects</span>
-              <span class="tag">Driftchat MVP</span>
-              <span class="tag">Halftime concept</span>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- SKILL TREE -->
-    <section id="skills" class="section section-skill-tree">
-      <div class="container">
-        <div class="section-header">
-          <h2>Skill Tree</h2>
-          <p>
-            Three main branches: Engineering, Product & Design, and Strategy & Analytics.
-            Each node comes from actual projects and work, not just theory.
-          </p>
-        </div>
-
-        <div class="skill-tree">
-          <!-- Column 1: Engineering -->
-          <div class="skill-branch">
-            <div class="branch-title">Engineering</div>
-            <div class="skill-node root">
-              <div class="node-header">Mechanical Systems</div>
-              <p>Mission-critical HVAC, chilled water loops, and cooling design for data centers.</p>
-            </div>
-            <div class="skill-node">
-              <div class="node-header">Hydronic Modeling</div>
-              <p>Pressure drop, flow balance, pump selection, and system efficiency trade-offs.</p>
-            </div>
-            <div class="skill-node">
-              <div class="node-header">Drawings & QA/QC</div>
-              <p>Record sets, coordination with other disciplines, and catching issues before site.</p>
-            </div>
-          </div>
-
-          <!-- Column 2: Product & Design -->
-          <div class="skill-branch">
-            <div class="branch-title">Product & Design</div>
-            <div class="skill-node root">
-              <div class="node-header">User-Centered Building</div>
-              <p>Designing Driftchat & Halftime from real user behavior, not just ideas.</p>
-            </div>
-            <div class="skill-node">
-              <div class="node-header">UX & Flows</div>
-              <p>Onboarding, matching flows, and conversation UX optimized for SMS friction.</p>
-            </div>
-            <div class="skill-node">
-              <div class="node-header">Experimentation</div>
-              <p>Fast MVPs, iterating from feedback, and shipping instead of over-planning.</p>
-            </div>
-          </div>
-
-          <!-- Column 3: Strategy & Analytics -->
-          <div class="skill-branch">
-            <div class="branch-title">Strategy & Analytics</div>
-            <div class="skill-node root">
-              <div class="node-header">Systems & Trade-Offs</div>
-              <p>Thinking in constraints: cost, reliability, efficiency, and human behavior.</p>
-            </div>
-            <div class="skill-node">
-              <div class="node-header">Unit Economics</div>
-              <p>Breaking problems into drivers, revenue/cost levers, and prioritizing impact.</p>
-            </div>
-            <div class="skill-node">
-              <div class="node-header">Communication</div>
-              <p>Turning messy problems into clear narratives for engineers, PMs, and clients.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- QUEST LOG / WORK -->
-    <section id="quests" class="section section-alt">
-      <div class="container">
-        <div class="section-header">
-          <h2>Quest Log</h2>
-          <p>
-            Ongoing and completed quests that shaped the skill tree: client work,
-            side projects, and writing.
-          </p>
-        </div>
-
-        <div class="grid">
-          <article class="card quest-card">
-            <div class="card-label">Main Quest</div>
-            <h3>Data Center Engineering @ WSP</h3>
-            <p>
-              Mechanical engineer on mission-critical data center projects: hydronic
-              systems, pressure drop analysis, equipment selection, and coordination.
-            </p>
-            <ul class="card-list">
-              <li>Chilled water loop design & optimization</li>
-              <li>Record drawings and QA/QC on tight deadlines</li>
-              <li>Cross-team coordination with electrical, controls, and clients</li>
-            </ul>
-          </article>
-
-          <article class="card quest-card">
-            <div class="card-label card-label--rare">Side Quest</div>
-            <h3>Driftchat</h3>
-            <p>
-              SMS-based conversation matching with an AI “wingman”. Built to test
-              matching logic, onboarding funnels, and conversational AI timing.
-            </p>
-            <a class="card-link" href="https://YOUR_DRIFTCHAT_LINK_HERE" target="_blank">
-              View Driftchat →
-            </a>
-          </article>
-
-          <article class="card quest-card">
-            <div class="card-label card-label--epic">Side Quest</div>
-            <h3>Halftime</h3>
-            <p>
-              A sports community platform focused on curated discussion, live moments,
-              and better discovery than Twitter/Reddit for fans and creators.
-            </p>
-            <p class="card-note">
-              Currently in exploration / design stage, focusing on content discovery and community structure.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- INVENTORY / LINKS -->
-    <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <h2>Inventory</h2>
-          <p>
-            Core items you might want to inspect if you’re evaluating me for a role.
-          </p>
-        </div>
-
-        <div class="inventory-grid">
-          <div class="inventory-item">
-            <div class="inv-title">Résumé</div>
-            <p>Career history, responsibilities, and impact in one place.</p>
-            <a href="https://YOUR_RESUME_LINK_HERE" target="_blank" class="btn small">
-              Inspect item →
-            </a>
-          </div>
-          <div class="inventory-item">
-            <div class="inv-title">Design Portfolio</div>
-            <p>Product flows, UI explorations, and experiments with Halftime, Driftchat, and more.</p>
-            <a href="https://YOUR_PORTFOLIO_LINK_HERE" target="_blank" class="btn small">
-              Inspect item →
-            </a>
-          </div>
-          <div class="inventory-item">
-            <div class="inv-title">Writing</div>
-            <p>Short essays on engineering trade-offs, systems, and decision-making.</p>
-            <div class="inv-links">
-              <a href="https://YOUR_WRITING_LINK_1_HERE" target="_blank">Writing piece 1</a>
-              <a href="https://YOUR_WRITING_LINK_2_HERE" target="_blank">Writing piece 2</a>
-            </div>
-          </div>
-          <div class="inventory-item">
-            <div class="inv-title">Driftchat</div>
-            <p>Live project exploring social UX and AI-assisted conversations via SMS.</p>
-            <a href="https://YOUR_DRIFTCHAT_LINK_HERE" target="_blank" class="btn small">
-              Open project →
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
-  <!-- FOOTER / CONTACT -->
-  <footer id="contact" class="site-footer">
-    <div class="container footer-inner">
-      <div>
-        <h3>Party invite</h3>
-        <p>
-          I’m open to roles at the intersection of engineering, analytics, and strategy—
-          especially in data centers, infrastructure, or AI-driven products.
-        </p>
-      </div>
-      <div class="footer-actions">
-        <a class="btn secondary" href="mailto:YOUR_EMAIL_HERE">
-          ✉️ Email Devansh
-        </a>
-        <a class="btn ghost" href="https://www.linkedin.com/in/YOUR_LINKEDIN_HERE" target="_blank">
-          in / LinkedIn
-        </a>
-      </div>
-    </div>
-    <div class="container footer-meta">
-      <span>© <span id="year"></span> Devansh Mishra</span>
-      <span>Theme: RPG Skill Tree, built for humans & recruiters.</span>
-    </div>
-
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
