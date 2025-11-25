@@ -40,27 +40,25 @@ body {
   box-shadow: 5px 5px 0 #000;
 }
 
-/* ===== Title (Option 3: white text + 1px black outline) ===== */
+/* ===== Title: simple, like other text but bigger, one line ===== */
 .ff-title-ffxiv {
-  font-family: "Cinzel", serif;
-  font-size: clamp(1.6rem, 3vw, 2.4rem); /* small enough to stay on one line */
+  font-family: "IBM Plex Sans", system-ui, sans-serif; /* same as rest */
+  font-size: clamp(1.4rem, 3.2vw, 2rem);              /* bigger but fits one line */
   text-align: center;
   line-height: 1.1;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
+  font-weight: 500;
 
-  color: #ffffff;                /* white fill */
-  -webkit-text-stroke: 1px #000; /* thin black outline */
-  text-stroke: 1px #000;
+  color: #000000;  /* plain black text */
 
-  margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 0.25rem;
+  margin-bottom: 1.4rem;
   display: block;
 
-  /* Gentle fade-in */
   opacity: 0;
-  transform: translateY(8px);
-  animation: ffTitleFadeIn 1s ease-out forwards;
+  transform: translateY(4px);
+  animation: ffTitleFadeIn 0.8s ease-out forwards;
 }
 
 /* ===== Main Menu List ===== */
@@ -90,11 +88,11 @@ body {
   width: 1.4rem;
   text-align: center;
   font-size: 0.9rem;
-  opacity: 0;
+  opacity: 0; /* default: hidden */
   transition: opacity 0.08s ease-out, transform 0.08s ease-out;
 }
 
-/* Hover selection */
+/* Hover selection: cursor + background show for ANY item */
 .ff-menu-item:hover,
 .ff-menu-item:focus-visible {
   border-color: #000;
@@ -108,10 +106,7 @@ body {
   transform: translateX(1px);
 }
 
-/* First item selected by default */
-.ff-menu-item:first-child .ff-cursor {
-  opacity: 1;
-}
+/* (removed first-child rule so triangle isn't stuck on Status only) */
 
 /* ===== Footer ===== */
 .ff-menu-footer {
@@ -126,18 +121,19 @@ body {
   letter-spacing: 0.12em;
 }
 
+/* Let footer text wrap fully instead of being cut off */
 .ff-footer-left,
 .ff-footer-right {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
 }
 
 /* ===== Animation Keyframes ===== */
 @keyframes ffTitleFadeIn {
   0% {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(8px);
   }
   100% {
     opacity: 1;
