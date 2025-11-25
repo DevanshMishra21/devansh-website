@@ -40,16 +40,18 @@ body {
   box-shadow: 5px 5px 0 #000;
 }
 
-/* ===== Clean Minimal Title (no outline, no gradient) ===== */
+/* ===== Title (Option 3: white text + 1px black outline) ===== */
 .ff-title-ffxiv {
   font-family: "Cinzel", serif;
-  font-size: clamp(1.6rem, 3vw, 2.4rem); /* smaller so it fits one line */
+  font-size: clamp(1.6rem, 3vw, 2.4rem); /* small enough to stay on one line */
   text-align: center;
   line-height: 1.1;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 
-  color: #000000; /* simple clean black text */
+  color: #ffffff;                /* white fill */
+  -webkit-text-stroke: 1px #000; /* thin black outline */
+  text-stroke: 1px #000;
 
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
