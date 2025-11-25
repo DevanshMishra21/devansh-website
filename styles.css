@@ -11,19 +11,18 @@ body {
   padding: 0;
 }
 
-/* ===== Body / Background ===== */
+/* ===== Body ===== */
 .ff-menu-body {
   background: #ffffff;
   color: #000000;
-  font-family: "IBM Plex Sans", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* ===== Centered menu frame ===== */
+/* ===== Frame ===== */
 .ff-menu-wrap {
   width: 100%;
   padding: 2rem 1.5rem;
@@ -41,38 +40,45 @@ body {
   box-shadow: 5px 5px 0 #000;
 }
 
-/* ===== Title / Subtitle ===== */
-.ff-menu-header {
-  text-align: center;
-  margin-bottom: 0.9rem;
-}
-
-.ff-menu-title {
+/* ===== FINAL FANTASY XIV–STYLE TITLE ===== */
+.ff-title-ffxiv {
   font-family: "Cinzel", serif;
-  font-size: 1.4rem;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  text-align: center;
+  line-height: 1.1;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  margin-bottom: 0.25rem;
+
+  /* Gold gradient fill */
+  background-image: linear-gradient(
+    to bottom,
+    #fff9d6,
+    #fcefb4,
+    #f2c94c
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  /* Black outline */
+  -webkit-text-stroke: 4px #000000;
+  text-stroke: 4px #000000;
+
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  display: block;
+
+  /* Fade-in animation */
+  opacity: 0;
+  transform: translateY(12px);
+  animation: ffTitleFadeIn 1.6s ease-out forwards;
 }
 
-.ff-menu-subtitle {
-  font-size: 0.8rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: #555;
-}
-
-/* Divider line */
-.ff-menu-divider {
-  border-bottom: 1px solid #000;
-  margin: 0.8rem 0 0.4rem;
-}
-
-/* ===== Menu list ===== */
+/* ===== Main Menu List ===== */
 .ff-menu-list {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.45rem;
   margin: 0.6rem 0 1rem;
 }
 
@@ -91,21 +97,15 @@ body {
   position: relative;
 }
 
-/* Cursor (triangle) */
 .ff-cursor {
   width: 1.4rem;
   text-align: center;
   font-size: 0.9rem;
-  opacity: 0; /* Only show on hover/focus by default */
+  opacity: 0;
   transition: opacity 0.08s ease-out, transform 0.08s ease-out;
 }
 
-/* Label */
-.ff-menu-label {
-  flex: 1;
-}
-
-/* Hover / focus state like FF selection */
+/* Hover selection */
 .ff-menu-item:hover,
 .ff-menu-item:focus-visible {
   border-color: #000;
@@ -119,7 +119,7 @@ body {
   transform: translateX(1px);
 }
 
-/* Make the first item look "selected" by default on desktop */
+/* First item selected by default */
 .ff-menu-item:first-child .ff-cursor {
   opacity: 1;
 }
@@ -129,12 +129,12 @@ body {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  margin-top: 0.8rem;
-  padding-top: 0.5rem;
+  margin-top: 1.4rem;
+  padding-top: 0.8rem;
   border-top: 1px solid #000;
   font-size: 0.78rem;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
 }
 
 .ff-footer-left,
@@ -144,19 +144,31 @@ body {
   text-overflow: ellipsis;
 }
 
+/* ===== Animation Keyframes ===== */
+@keyframes ffTitleFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 600px) {
   .ff-menu-frame {
     padding: 1.4rem 1.3rem 1.2rem;
   }
 
-  .ff-menu-title {
-    font-size: 1.2rem;
-    letter-spacing: 0.16em;
-  }
-
-  .ff-menu-subtitle {
-    letter-spacing: 0.12em;
+  .ff-title-ffxiv {
+    font-size: clamp(2.2rem, 10vw, 4rem);
+    -webkit-text-stroke: 3px #000;
   }
 
   .ff-menu-item {
