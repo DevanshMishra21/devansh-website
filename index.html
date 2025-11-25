@@ -1,22 +1,209 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Your Website</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
-    }
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <title>Devansh Mishra | Engineering x Strategy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <iframe src="https://readymag.website/5914258" allowfullscreen></iframe>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-mark">DM</span>
+        <span class="logo-text">Devansh Mishra</span>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Engineering • Strategy • Product</p>
+          <h1>
+            Data-center engineer building<br />
+            <span class="accent">AI products & decision tools</span>
+            for the real world.
+          </h1>
+          <p class="hero-sub">
+            I design and ship systems where watts, dollars, and user experience
+            all matter. Currently at WSP working on mission-critical data centers,
+            and building Driftchat on the side.
+          </p>
+
+          <div class="hero-actions">
+            <!-- TODO: replace the hrefs with your actual links -->
+            <a class="btn primary" href="https://YOUR_RESUME_LINK_HERE" target="_blank">
+              View Résumé
+            </a>
+            <a class="btn secondary" href="https://YOUR_PORTFOLIO_LINK_HERE" target="_blank">
+              Design Portfolio
+            </a>
+          </div>
+
+          <div class="hero-links">
+            <!-- Replace with your real links -->
+            <a href="https://YOUR_WRITING_LINK_1_HERE" target="_blank">Writing: Piece 1</a>
+            <span>•</span>
+            <a href="https://YOUR_WRITING_LINK_2_HERE" target="_blank">Writing: Piece 2</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-tag">Currently</div>
+          <h2>Mechanical Engineer, Data Centers</h2>
+          <p class="hero-card-body">
+            WSP • Chicago, IL<br />
+            Designing HVAC & cooling systems for high-density data centers.
+            I care about reliability, efficiency, and clean execution.
+          </p>
+          <ul class="hero-list">
+            <li>Pressure drop & flow modeling for large chilled-water systems</li>
+            <li>Record drawings & QA/QC for mission-critical projects</li>
+            <li>Exploring strategy & analytics roles at MBB / top firms</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK / LINKS SECTION -->
+    <section id="work" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>What I’m Building & Sharing</h2>
+          <p>
+            A mix of engineering work, product experiments, and writing at the
+            intersection of infrastructure and strategy.
+          </p>
+        </div>
+
+        <div class="grid">
+          <!-- Portfolio / Design -->
+          <article class="card">
+            <div class="card-pill">Design & Product</div>
+            <h3>Design Portfolio</h3>
+            <p>
+              A curated set of projects across UX, product flows, and
+              visualization work. From sports communities to internal tools.
+            </p>
+            <a class="card-link" href="https://YOUR_PORTFOLIO_LINK_HERE" target="_blank">
+              View portfolio →
+            </a>
+          </article>
+
+          <!-- Driftchat -->
+          <article class="card">
+            <div class="card-pill">Side Project</div>
+            <h3>Driftchat</h3>
+            <p>
+              SMS-first conversation matching app with an AI “wingman”
+              that keeps the vibe alive. Built to experiment with
+              behavior, matching, and product loops.
+            </p>
+            <a class="card-link" href="https://YOUR_DRIFTCHAT_LINK_HERE" target="_blank">
+              Visit Driftchat →
+            </a>
+          </article>
+
+          <!-- Writing -->
+          <article class="card">
+            <div class="card-pill">Writing</div>
+            <h3>Essays & Notes</h3>
+            <p>
+              Short pieces on engineering trade-offs, decision-making under
+              constraints, and what infrastructure can learn from product thinking.
+            </p>
+            <ul class="card-list">
+              <li>
+                <a href="https://YOUR_WRITING_LINK_1_HERE" target="_blank">
+                  Essay 1 – replace with title
+                </a>
+              </li>
+              <li>
+                <a href="https://YOUR_WRITING_LINK_2_HERE" target="_blank">
+                  Essay 2 – replace with title
+                </a>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SNAPSHOT / HIGHLIGHTS -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Snapshot</h2>
+          <p>
+            A quick view of how I think and what I’ve shipped so far.
+          </p>
+        </div>
+
+        <div class="grid">
+          <div class="card compact">
+            <h3>Engineering</h3>
+            <p>
+              Mission-critical data center work: flow calculations, PUE-driven
+              decisions, and mechanical systems that can’t fail at 2 a.m.
+            </p>
+          </div>
+          <div class="card compact">
+            <h3>Analytics & Strategy</h3>
+            <p>
+              Obsessed with unit economics, load factors, and bottlenecks.
+              Preparing for a transition into analytics / consulting roles.
+            </p>
+          </div>
+          <div class="card compact">
+            <h3>Product & Experiments</h3>
+            <p>
+              Halftime, Driftchat, and small internal tools — I like
+              building things people actually use, not just slideware.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h3>Let’s talk</h3>
+        <p>
+          I’m open to roles at the intersection of engineering, analytics,
+          and strategy — especially within data centers, infrastructure, and tech.
+        </p>
+      </div>
+      <div class="footer-actions">
+        <!-- Replace email + LinkedIn with your info -->
+        <a class="btn secondary" href="mailto:YOUR_EMAIL_HERE">
+          Email me
+        </a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/YOUR_LINKEDIN_HERE" target="_blank">
+          LinkedIn
+        </a>
+      </div>
+    </div>
+    <div class="container footer-meta">
+      <span>© <span id="year"></span> Devansh Mishra</span>
+      <span>Built by hand. No templates.</span>
+    </div>
+
+    <script>
+      // simple dynamic year
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </footer>
 </body>
 </html>
