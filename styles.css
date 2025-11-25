@@ -40,13 +40,13 @@ body {
   box-shadow: 5px 5px 0 #000;
 }
 
-/* ===== Clean Minimal Title (No Outline, No Gradient) ===== */
+/* ===== Clean Minimal Title (no outline, no gradient) ===== */
 .ff-title-ffxiv {
   font-family: "Cinzel", serif;
-  font-size: clamp(1.8rem, 4vw, 3rem); /* smaller size */
+  font-size: clamp(1.6rem, 3vw, 2.4rem); /* smaller so it fits one line */
   text-align: center;
-  line-height: 1.2;
-  letter-spacing: 0.15em;
+  line-height: 1.1;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 
   color: #000000; /* simple clean black text */
@@ -60,7 +60,6 @@ body {
   transform: translateY(8px);
   animation: ffTitleFadeIn 1s ease-out forwards;
 }
-
 
 /* ===== Main Menu List ===== */
 .ff-menu-list {
@@ -138,10 +137,6 @@ body {
     opacity: 0;
     transform: translateY(12px);
   }
-  60% {
-    opacity: 1;
-    transform: translateY(0);
-  }
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -152,11 +147,6 @@ body {
 @media (max-width: 600px) {
   .ff-menu-frame {
     padding: 1.4rem 1.3rem 1.2rem;
-  }
-
-  .ff-title-ffxiv {
-    font-size: clamp(2.2rem, 10vw, 4rem);
-    -webkit-text-stroke: 3px #000;
   }
 
   .ff-menu-item {
