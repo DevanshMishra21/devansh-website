@@ -49,21 +49,25 @@ body {
 /* === Heading: Option 1 fantasy-style, loud but clean === */
 .ff-title-ffxiv {
   font-family: "Cinzel", serif;
-  font-weight: 600;                       /* stronger + premium */
-  font-size: clamp(2.4rem, 4vw, 3.1rem);  /* bigger = single impactful line */
-  letter-spacing: 0.07em;                 /* tighter, elegant */
+  font-weight: 700;
+  font-size: clamp(2.8rem, 4.3vw, 3.6rem);
   text-transform: uppercase;
+  letter-spacing: 0.03em;        /* tight like your sample */
   text-align: center;
-
   color: #000;
 
-  margin-top: 0.5rem;
-  margin-bottom: 1.2rem;
+  /* recreate the tall/condensed look */
+  font-stretch: 75%;             /* makes the letters narrow */
+  transform: scaleY(1.05);       /* taller vertical proportions */
+
+  margin-top: 0.4rem;
+  margin-bottom: 1.5rem;
 
   opacity: 0;
-  transform: translateY(6px);
+  transform: translateY(8px);
   animation: ffTitleFadeIn 0.7s ease-out forwards;
 }
+
 
 
 /* ===== Main Menu List ===== */
