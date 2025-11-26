@@ -43,21 +43,18 @@ body {
 /* ===== Default Final Fantasy Serif Title ===== */
 /* === Heading: Option 1 fantasy-style, loud but clean === */
 .ff-title-ffxiv {
-  font-family: "Cinzel", serif;         /* fantasy-style serif */
-  font-weight: 600;                     /* stronger, like the image */
-  font-size: clamp(2rem, 4.2vw, 2.9rem);/* big, but fits on one line in the box */
-  text-align: center;
+  font-family: "Cinzel", serif;
+  font-weight: 600;                       /* stronger + premium */
+  font-size: clamp(2.4rem, 4vw, 3.1rem);  /* bigger = single impactful line */
+  letter-spacing: 0.07em;                 /* tighter, elegant */
   text-transform: uppercase;
-  letter-spacing: 0.08em;               /* tighter than before so it doesn’t wrap */
-  line-height: 1.05;                    /* tall, condensed look */
+  text-align: center;
 
-  color: #000000;                       /* pure black, no outline, no gradient */
+  color: #000;
 
-  margin-top: 0.4rem;
-  margin-bottom: 1.4rem;
-  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 1.2rem;
 
-  /* subtle entrance animation */
   opacity: 0;
   transform: translateY(6px);
   animation: ffTitleFadeIn 0.7s ease-out forwards;
