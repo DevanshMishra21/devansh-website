@@ -41,23 +41,28 @@ body {
 }
 
 /* ===== Default Final Fantasy Serif Title ===== */
+/* === Heading: Option 1 fantasy-style, loud but clean === */
 .ff-title-ffxiv {
-  font-family: "Cinzel", serif;
-  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  font-family: "Cinzel", serif;         /* fantasy-style serif */
+  font-weight: 600;                     /* stronger, like the image */
+  font-size: clamp(2rem, 4.2vw, 2.9rem);/* big, but fits on one line in the box */
   text-align: center;
-  line-height: 1.2;
-  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #000;
+  letter-spacing: 0.08em;               /* tighter than before so it doesn’t wrap */
+  line-height: 1.05;                    /* tall, condensed look */
 
-  margin-top: 0.2rem;
+  color: #000000;                       /* pure black, no outline, no gradient */
+
+  margin-top: 0.4rem;
   margin-bottom: 1.4rem;
   display: block;
 
+  /* subtle entrance animation */
   opacity: 0;
   transform: translateY(6px);
-  animation: ffTitleFadeIn 0.8s ease-out forwards;
+  animation: ffTitleFadeIn 0.7s ease-out forwards;
 }
+
 
 /* ===== Main Menu List ===== */
 .ff-menu-list {
