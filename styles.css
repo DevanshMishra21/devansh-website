@@ -48,22 +48,27 @@ body {
 /* ===== Default Final Fantasy Serif Title ===== */
 /* === Heading: Option 1 fantasy-style, loud but clean === */
 /* === Jacquard 12 Heading === */
+/* === Jacquard 24 Heading (Single Line) === */
 .ff-title-ffxiv {
-  font-family: "Jacquard 12", serif;
-  font-size: clamp(2.4rem, 4.4vw, 3.2rem);   /* bold but fits in box */
-  font-weight: 400;                          /* Jacquard only has 1 weight */
+  font-family: "Jacquard 24", serif;
+  font-size: clamp(1.8rem, 3.2vw, 2.55rem);  /* tuned to fit one line */
+  font-weight: 400;                          /* only weight available */
   text-transform: uppercase;
   letter-spacing: 0.02em;                    /* tight fantasy spacing */
   text-align: center;
+  white-space: nowrap;                       /* FORCE one line */
+
   color: #000;
 
-  margin-top: 0.4rem;
+  margin-top: 0.5rem;
   margin-bottom: 1.4rem;
 
+  /* fade-in animation */
   opacity: 0;
   transform: translateY(8px);
   animation: ffTitleFadeIn 0.7s ease-out forwards;
 }
+
 
 
 
