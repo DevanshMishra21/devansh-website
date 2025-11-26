@@ -9,10 +9,11 @@
 </head>
 
 <body class="ff-menu-body">
+
   <main class="ff-menu-wrap">
     <div class="ff-menu-frame">
 
-      <!-- Final Fantasy style serif title -->
+      <!-- Title -->
       <div class="ff-title-ffxiv">
         DEVANSH RAJ MISHRA
       </div>
@@ -63,8 +64,25 @@
     </div>
   </main>
 
+  <!-- 🔊 Hover Sound -->
+  <audio id="hover-sound" src="hover.mp3" preload="auto"></audio>
+
+  <!-- JS -->
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const hoverSound = document.getElementById("hover-sound");
+      const menuItems = document.querySelectorAll(".ff-menu-item");
+
+      menuItems.forEach((item) => {
+        item.addEventListener("mouseenter", () => {
+          if (!hoverSound) return;
+          hoverSound.currentTime = 0; // restart each hover
+          hoverSound.play().catch(() => {});
+        });
+      });
+    });
   </script>
 
 </body>
