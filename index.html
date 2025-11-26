@@ -2,36 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Devansh | New Game</title>
+  <title>Devansh | Main Menu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Final Fantasy–ish fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="ff-menu-body">
 
+<body class="ff-menu-body">
   <main class="ff-menu-wrap">
     <div class="ff-menu-frame">
-      <header class="ff-menu-header">
-        <div class="ff-menu-title">DEVANSH MISHRA</div>
-        <div class="ff-menu-subtitle">Final Status Screen</div>
-      </header>
 
-      <div class="ff-menu-divider"></div>
+      <!-- Final Fantasy style serif title -->
+      <div class="ff-title-ffxiv">
+        DEVANSH RAJ MISHRA
+      </div>
 
       <nav class="ff-menu-list">
-        <!-- Replace hrefs with your actual links / pages -->
-        <a href="https://YOUR_RESUME_LINK_HERE" target="_blank" class="ff-menu-item">
+
+        <a href="https://YOUR_RESUME_LINK" target="_blank" class="ff-menu-item">
           <span class="ff-cursor">▶</span>
           <span class="ff-menu-label">STATUS / RÉSUMÉ</span>
         </a>
 
-        <a href="https://YOUR_PORTFOLIO_LINK_HERE" target="_blank" class="ff-menu-item">
+        <a href="https://YOUR_PORTFOLIO_LINK" target="_blank" class="ff-menu-item">
           <span class="ff-cursor">▶</span>
           <span class="ff-menu-label">PORTFOLIO</span>
         </a>
 
-        <a href="https://YOUR_WRITING_LINK_1_HERE" target="_blank" class="ff-menu-item">
+        <a href="https://YOUR_WRITING_LINK" target="_blank" class="ff-menu-item">
           <span class="ff-cursor">▶</span>
           <span class="ff-menu-label">WRITING</span>
         </a>
@@ -41,30 +39,33 @@
           <span class="ff-menu-label">ABOUT ME (LORE)</span>
         </a>
 
-        <a href="https://YOUR_DRIFTCHAT_LINK_HERE" target="_blank" class="ff-menu-item">
+        <a href="https://YOUR_DRIFTCHAT_LINK" target="_blank" class="ff-menu-item">
           <span class="ff-cursor">▶</span>
           <span class="ff-menu-label">DRIFTCHAT</span>
         </a>
 
-        <a href="mailto:YOUR_EMAIL_HERE" class="ff-menu-item">
+        <a href="mailto:YOUR_EMAIL" class="ff-menu-item">
           <span class="ff-cursor">▶</span>
           <span class="ff-menu-label">CONTACT</span>
         </a>
+
       </nav>
 
       <footer class="ff-menu-footer">
         <div class="ff-footer-left">
-          LV 24 • CLASS: Systems / Product / Strategy
+          LV 24 • CLASS: SYSTEMS / PRODUCT / STRATEGY
         </div>
         <div class="ff-footer-right">
-          © <span id="year"></span> Devansh • Theme: FF Main Menu
+          © <span id="year"></span> DEVANSH • FF MENU
         </div>
       </footer>
+
     </div>
   </main>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
