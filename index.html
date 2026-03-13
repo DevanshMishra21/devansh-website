@@ -2,84 +2,172 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Devansh | Main Menu</title>
+  <title>COPA | Access</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #000000;
+      --fg: #ffffff;
+      --accent: rgba(255, 255, 255, 0.1);
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: 'Inter', sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .copa-wrap {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px;
+      max-width: 800px;
+      margin: 0 auto;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* Title Styling - Italicized High Impact */
+    .copa-title {
+      font-size: clamp(4rem, 15vw, 9rem);
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      font-style: italic;
+      line-height: 0.9;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .copa-subtitle {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.4em;
+      color: rgba(255, 255, 255, 0.4);
+      text-transform: uppercase;
+      margin-bottom: 60px;
+    }
+
+    /* List Items - Cold & Functional */
+    .copa-menu-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .copa-item {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: var(--fg);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      padding: 18px 24px;
+      border: 1px solid var(--accent);
+      text-transform: uppercase;
+      transition: all 0.2s ease;
+      background: transparent;
+    }
+
+    .copa-item:hover {
+      background: var(--fg);
+      color: var(--bg);
+      transform: translateX(8px);
+    }
+
+    .copa-cursor {
+      margin-right: 15px;
+      font-size: 10px;
+      opacity: 0.5;
+    }
+
+    /* Footer - System Info */
+    .copa-footer {
+      padding: 40px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      color: rgba(255, 255, 255, 0.3);
+      text-transform: uppercase;
+    }
+
+    .footer-highlight {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 600px) {
+      .copa-wrap { padding: 24px; }
+      .copa-footer { flex-direction: column; gap: 10px; text-align: center; }
+    }
+  </style>
 </head>
 
-<body class="ff-menu-body">
+<body>
 
-  <main class="ff-menu-wrap">
-    <div class="ff-menu-frame">
+  <main class="copa-wrap">
+    
+    <div class="copa-title">COPA</div>
+    <div class="copa-subtitle">The pitch is open.</div>
 
-      <!-- Title -->
-      <div class="ff-title-ffxiv">
-        DEVANSH RAJ MISHRA
-      </div>
+    <nav class="copa-menu-list">
 
-      <nav class="ff-menu-list">
+      <a href="https://x.com/CopaApp" target="_blank" class="copa-item">
+        <span class="copa-cursor">▶</span>
+        <span>X // @CopaApp</span>
+      </a>
 
-        <a href="https://drive.google.com/file/d/18JR_M0X2r-54dyq7NIxrd3zVON2dX6BC/view?usp=sharing" target="_blank" class="ff-menu-item">
-          <span class="ff-cursor">▶</span>
-          <span class="ff-menu-label">RÉSUMÉ</span>
-        </a>
+      <a href="#" target="_blank" class="copa-item">
+        <span class="copa-cursor">▶</span>
+        <span>Discord // The Terrace</span>
+      </a>
 
-        <a href="https://drive.google.com/file/d/1gTSNYc4m_29rI_FuIP3TgwIXu19bg6X7/view?usp=drive_link" target="_blank" class="ff-menu-item">
-          <span class="ff-cursor">▶</span>
-          <span class="ff-menu-label">PORTFOLIO</span>
-        </a>
+      <a href="mailto:access@getcopa.com" class="copa-item">
+        <span class="copa-cursor">▶</span>
+        <span>Contact // Access</span>
+      </a>
 
-        <a href="https://YOUR_WRITING_LINK" target="_blank" class="ff-menu-item">
-          <span class="ff-cursor">▶</span>
-          <span class="ff-menu-label">WRITING</span>
-        </a>
+      <a href="#" class="copa-item" style="opacity: 0.5;">
+        <span class="copa-cursor">▶</span>
+        <span>Beta // Coming Soon</span>
+      </a>
 
-        <a href="about.html" class="ff-menu-item">
-          <span class="ff-cursor">▶</span>
-          <span class="ff-menu-label">ABOUT ME</span>
-        </a>
-
-        <a href="https://https://www.drift-chat.com/" target="_blank" class="ff-menu-item">
-          <span class="ff-cursor">▶</span>
-          <span class="ff-menu-label">DRIFTCHAT</span>
-        </a>
-
-        <a href="mailto:devanshrajmishra@hotmail.com" class="ff-menu-item">
-          <span class="ff-cursor">▶</span>
-          <span class="ff-menu-label">CONTACT</span>
-        </a>
-
-      </nav>
-
-      <footer class="ff-menu-footer">
-        <div class="ff-footer-left">
-          SYSTEMS / ANALYTICS / STRATEGY
-        </div>
-        <div class="ff-footer-right">
-          © <span id="year"></span> DEVANSH • MENU
-        </div>
-      </footer>
-
-    </div>
+    </nav>
   </main>
 
-  <!-- 🔊 Hover Sound -->
+  <footer class="copa-footer">
+    <div>
+      System: <span class="footer-highlight">Active</span> // Node: <span class="footer-highlight">Beta v1.0</span>
+    </div>
+    <div>
+      © <span id="year"></span> COPA • Member Since 2026
+    </div>
+  </footer>
+
   <audio id="hover-sound" src="hover.mp3" preload="auto"></audio>
 
-  <!-- JS -->
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
     document.addEventListener("DOMContentLoaded", function () {
       const hoverSound = document.getElementById("hover-sound");
-      const menuItems = document.querySelectorAll(".ff-menu-item");
+      const menuItems = document.querySelectorAll(".copa-item");
 
       menuItems.forEach((item) => {
         item.addEventListener("mouseenter", () => {
           if (!hoverSound) return;
-          hoverSound.currentTime = 0; // restart each hover
+          hoverSound.currentTime = 0; 
           hoverSound.play().catch(() => {});
         });
       });
