@@ -9,7 +9,8 @@
     :root {
       --bg: #000000;
       --fg: #ffffff;
-      --accent: rgba(255, 255, 255, 0.1);
+      --accent: rgba(255, 255, 255, 0.08);
+      --ticker-bg: rgba(255, 255, 255, 0.03);
     }
 
     body {
@@ -24,73 +25,128 @@
       overflow: hidden;
     }
 
+    /* Live Data Ticker */
+    .ticker-wrap {
+      width: 100%;
+      overflow: hidden;
+      background: var(--ticker-bg);
+      border-bottom: 1px solid var(--accent);
+      padding: 10px 0;
+      z-index: 10;
+    }
+
+    .ticker {
+      display: inline-block;
+      white-space: nowrap;
+      animation: ticker 40s linear infinite;
+    }
+
+    .ticker-item {
+      display: inline-block;
+      padding: 0 50px;
+      font-size: 9px;
+      font-weight: 900;
+      letter-spacing: 0.3em;
+      color: rgba(255, 255, 255, 0.5);
+      text-transform: uppercase;
+    }
+
+    @keyframes ticker {
+      0% { transform: translate3d(0, 0, 0); }
+      100% { transform: translate3d(-50%, 0, 0); }
+    }
+
+    /* Main Container */
     .copa-wrap {
       flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
       padding: 40px;
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
       width: 100%;
       box-sizing: border-box;
     }
 
-    /* Title Styling - Italicized High Impact */
+    .copa-header {
+      margin-bottom: 60px;
+    }
+
     .copa-title {
-      font-size: clamp(4rem, 15vw, 9rem);
+      font-size: clamp(4rem, 12vw, 8rem);
       font-weight: 900;
       letter-spacing: -0.05em;
       font-style: italic;
-      line-height: 0.9;
-      margin-bottom: 20px;
+      line-height: 0.8;
+      margin: 0;
       text-transform: uppercase;
     }
 
     .copa-subtitle {
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 700;
-      letter-spacing: 0.4em;
-      color: rgba(255, 255, 255, 0.4);
+      letter-spacing: 0.5em;
+      color: rgba(255, 255, 255, 0.3);
       text-transform: uppercase;
-      margin-bottom: 60px;
+      margin-top: 15px;
     }
 
-    /* List Items - Cold & Functional */
-    .copa-menu-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
+    /* Square Menu Grid */
+    .copa-menu-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px; /* Creates thin border effect with the grid background */
+      background-color: var(--accent);
+      border: 1px solid var(--accent);
     }
 
     .copa-item {
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
       text-decoration: none;
       color: var(--fg);
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      padding: 18px 24px;
-      border: 1px solid var(--accent);
+      padding: 30px;
+      min-height: 160px;
+      background-color: var(--bg);
       text-transform: uppercase;
-      transition: all 0.2s ease;
-      background: transparent;
+      transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+      position: relative;
+      box-sizing: border-box;
     }
 
     .copa-item:hover {
-      background: var(--fg);
+      background-color: var(--fg);
       color: var(--bg);
-      transform: translateX(8px);
+      z-index: 2;
     }
 
-    .copa-cursor {
-      margin-right: 15px;
-      font-size: 10px;
-      opacity: 0.5;
+    .copa-label {
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: 0.15em;
     }
 
-    /* Footer - System Info */
+    .copa-meta {
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      opacity: 0.4;
+    }
+
+    /* Technical Index (Corner) */
+    .copa-item::after {
+      content: attr(data-index);
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 8px;
+      font-weight: 900;
+      opacity: 0.2;
+    }
+
+    /* Footer */
     .copa-footer {
       padding: 40px;
       display: flex;
@@ -98,68 +154,80 @@
       font-size: 9px;
       font-weight: 700;
       letter-spacing: 0.3em;
-      color: rgba(255, 255, 255, 0.3);
+      color: rgba(255, 255, 255, 0.2);
       text-transform: uppercase;
     }
 
-    .footer-highlight {
-      color: rgba(255, 255, 255, 0.7);
-    }
-
-    /* Mobile adjustments */
+    /* Mobile */
     @media (max-width: 600px) {
-      .copa-wrap { padding: 24px; }
-      .copa-footer { flex-direction: column; gap: 10px; text-align: center; }
+      .copa-menu-grid { grid-template-columns: 1fr; }
+      .copa-wrap { padding: 20px; }
+      .copa-title { font-size: 4.5rem; }
+      .copa-footer { flex-direction: column; gap: 15px; text-align: center; }
     }
   </style>
 </head>
 
 <body>
 
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span class="ticker-item">LIVE DATA FEED //</span>
+      <span class="ticker-item">ARS 2 - 1 CHE [88']</span>
+      <span class="ticker-item">MCI 0 - 0 LIV [HT]</span>
+      <span class="ticker-item">RMA 3 - 1 BAR [FT]</span>
+      <span class="ticker-item">SQUADLE TARGET ACTIVE</span>
+      <span class="ticker-item">SYSTEM STATUS: OPTIMAL</span>
+      <span class="ticker-item">LIVE DATA FEED //</span>
+      <span class="ticker-item">ARS 2 - 1 CHE [88']</span>
+      <span class="ticker-item">MCI 0 - 0 LIV [HT]</span>
+      <span class="ticker-item">RMA 3 - 1 BAR [FT]</span>
+      <span class="ticker-item">SQUADLE TARGET ACTIVE</span>
+      <span class="ticker-item">SYSTEM STATUS: OPTIMAL</span>
+    </div>
+  </div>
+
   <main class="copa-wrap">
-    
-    <div class="copa-title">COPA</div>
-    <div class="copa-subtitle">The pitch is open.</div>
+    <header class="copa-header">
+      <h1 class="copa-title">COPA</h1>
+      <div class="copa-subtitle">Accessing the Terrace.</div>
+    </header>
 
-    <nav class="copa-menu-list">
-
-      <a href="https://x.com/CopaApp" target="_blank" class="copa-item">
-        <span class="copa-cursor">▶</span>
-        <span>X // @CopaApp</span>
+    <nav class="copa-menu-grid">
+      <a href="https://x.com/CopaApp" target="_blank" class="copa-item" data-index="01">
+        <span class="copa-meta">Network</span>
+        <span class="copa-label">X // @CopaApp</span>
       </a>
 
-      <a href="#" target="_blank" class="copa-item">
-        <span class="copa-cursor">▶</span>
-        <span>Discord // The Terrace</span>
+      <a href="#" target="_blank" class="copa-item" data-index="02">
+        <span class="copa-meta">Community</span>
+        <span class="copa-label">The Discord</span>
       </a>
 
-      <a href="mailto:access@getcopa.com" class="copa-item">
-        <span class="copa-cursor">▶</span>
-        <span>Contact // Access</span>
+      <a href="mailto:access@getcopa.com" class="copa-item" data-index="03">
+        <span class="copa-meta">Inbound</span>
+        <span class="copa-label">Contact</span>
       </a>
 
-      <a href="#" class="copa-item" style="opacity: 0.5;">
-        <span class="copa-cursor">▶</span>
-        <span>Beta // Coming Soon</span>
+      <a href="#" class="copa-item" data-index="04" style="opacity: 0.6;">
+        <span class="copa-meta">Status: Locked</span>
+        <span class="copa-label">Beta Access</span>
       </a>
-
     </nav>
   </main>
 
   <footer class="copa-footer">
     <div>
-      System: <span class="footer-highlight">Active</span> // Node: <span class="footer-highlight">Beta v1.0</span>
+      V1.0 // EST. 2026 // <span style="color: white;">ACTIVE</span>
     </div>
     <div>
-      © <span id="year"></span> COPA • Member Since 2026
+      © COPA • DEVANSH RAJ MISHRA
     </div>
   </footer>
 
   <audio id="hover-sound" src="hover.mp3" preload="auto"></audio>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
     document.addEventListener("DOMContentLoaded", function () {
       const hoverSound = document.getElementById("hover-sound");
       const menuItems = document.querySelectorAll(".copa-item");
@@ -167,7 +235,7 @@
       menuItems.forEach((item) => {
         item.addEventListener("mouseenter", () => {
           if (!hoverSound) return;
-          hoverSound.currentTime = 0; 
+          hoverSound.currentTime = 0;
           hoverSound.play().catch(() => {});
         });
       });
